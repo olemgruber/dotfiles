@@ -36,7 +36,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 #      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 # }
 
-
+# Set terminal background to black and text to white (iTerm2/Terminal.app)
+printf '\033]10;rgb:FF/FF/FF\007'  # White text
+printf '\033]11;rgb:00/00/00\007'  # Black background
 
 
 ##############################
