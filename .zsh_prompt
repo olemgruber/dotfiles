@@ -6,4 +6,8 @@ YELLOW="%{$(tput setaf 148)%}"
 ORANGE="%{$(tput setaf 178)%}"
 GRAY="%{$(tput setaf 66)%}"
 
-export PS1="${MAINGREEN}%T | ${SECONDGREEN}Lemgruber > ${YELLOW}%1~ ${ORANGE} ${GRAY}"
+# Background color (add this)
+BG_COLOR="%{$(tput setab 16)%}"  # Dark background (color code 16)
+RESET="%{$(tput sgr0)%}"          # Reset all formatting
+
+export PS1="${BG_COLOR}${MAINGREEN}%T | ${SECONDGREEN}Lemgruber > ${YELLOW}%1~ ${ORANGE} ${GRAY}${RESET}"
