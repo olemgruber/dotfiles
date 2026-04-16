@@ -10,4 +10,8 @@ GRAY="%{$(tput setaf 66)%}"
 BG_COLOR="%{$(tput setab 16)%}"  # Dark background (color code 16)
 RESET="%{$(tput sgr0)%}"          # Reset all formatting
 
+# Set terminal background to black and text to white (iTerm2/Terminal.app)
+printf '\033]10;rgb:FF/FF/FF\007'  # White text
+printf '\033]11;rgb:00/00/00\007'  # Black background
+
 export PS1="${BG_COLOR}${MAINGREEN}%T | ${SECONDGREEN}Lemgruber > ${YELLOW}%1~ ${ORANGE} ${GRAY}${RESET}"
